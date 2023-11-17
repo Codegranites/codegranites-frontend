@@ -4,6 +4,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Merging](#merging)
@@ -32,6 +33,16 @@ Then run:
 ```bash
 npm run dev
 ```
+
+# Dependencies
+
+- Husky(Anti Beans)
+- Prettiersky(Anti Beans)
+- React Icons
+- React Toastify(for any alert or toast)
+- Tailwindcss
+- Sass
+- Tw-merge + clsx(for conditional classes)
 
 # Usage
 
