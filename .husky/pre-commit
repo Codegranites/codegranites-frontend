@@ -26,14 +26,14 @@ echo '🏗️👷 Wait fess,checking for typescript errors' 🔍🧐
 # Check tsconfig standards
 npm run check-types ||
 (
-    echo '❌ Omo Failed Type check. ❌
+    echo '🤡😂❌🤡 Omo, I Don See Beans. 🤡😂❌🤡
             Are you seriously trying to write that? Make the changes required above.'
     false;
 )
 
 npm run format
 
-# If everything passes... Now we can commit
+# If no beans, then... Now we can commit
 echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
 
 
