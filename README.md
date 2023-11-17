@@ -22,7 +22,7 @@ First, run:
 npm install
 ```
 
-To activate husky
+To activate husky(If needed)
 
 ```bash
 npm run prepare
