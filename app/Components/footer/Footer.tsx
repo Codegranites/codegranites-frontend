@@ -1,9 +1,9 @@
-import Image from "next/image";
-import React from "react";
-import SubscribeFooter from "./SubscribeFooter";
-import { FOOTER_LINKS } from "@/libs/constants";
-import cn from "@/utils/tailwind";
-import { BsTwitterX } from "react-icons/bs";
+import Image from 'next/image';
+import React from 'react';
+import SubscribeFooter from './SubscribeFooter';
+import { FOOTER_LINKS } from '@/libs/constants';
+import cn from '@/utils/tailwind';
+import { BsTwitterX } from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -11,13 +11,7 @@ const Footer = () => {
       <div className="w-full h-full max-container flex flex-col justify-between px-4 lg:px-8 min-[1440px]:px-0 pb-8">
         <div className="flex flex-col gap-y-5 ">
           <div className="w-full max-[550px]:flex-col flex justify-between lg:justify-start items-center max-[550px]:items-start max-[550px]:gap-y-5">
-            <Image
-              src="/logo.png"
-              alt="logo"
-              width={155}
-              height={55}
-              className="max-sm:w-[120px]"
-            />
+            <Image src="/logo.png" alt="logo" width={155} height={55} className="max-sm:w-[120px]" />
             <div className="w-full min-[550px]:max-w-[300px] sm:max-w-[380px] lg:hidden ">
               <SubscribeFooter />
             </div>
@@ -40,8 +34,8 @@ const Footer = () => {
               {FOOTER_LINKS.help.map((link) => (
                 <li
                   key={link.id}
-                  className={cn("capitalize", {
-                    uppercase: link.link === "faq",
+                  className={cn('capitalize', {
+                    uppercase: link.link === 'faq',
                   })}
                 >
                   {link.label}

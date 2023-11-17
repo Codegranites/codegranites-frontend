@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { NAV_LINKS } from "@/libs/constants";
-import cn from "@/utils/tailwind";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { NAV_LINKS } from '@/libs/constants';
+import cn from '@/utils/tailwind';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState("");
-  const searchParams = useSearchParams().get("path");
+  const [isActive, setIsActive] = useState('');
+  const searchParams = useSearchParams().get('path');
 
   useEffect(() => {
     if (searchParams) {
@@ -28,18 +28,14 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center gap-x-5 lg:gap-x-7 2xl:gap-x-10 w-full justify-center max-w-[50%] 2xl:max-w-[40%]">
         {NAV_LINKS.map((link) => (
           <Link
-            href={
-              link.link === "home"
-                ? "/?path=home"
-                : `${link.link}?path=${link.link}`
-            }
+            href={link.link === 'home' ? '/?path=home' : `${link.link}?path=${link.link}`}
             key={link.id}
             onClick={() => {
               setIsActive(link.link);
             }}
             className={cn(
-              " w-full text-black  flex justify-center capitalize text-base relative font-medium  before:bg-primary-light before:w-[0%] before:h-1 before:absolute before:-bottom-2 before:left-0 before:transition-all before:duration-500 ",
-              isActive === link.link ? "before:w-full text-primary-light" : "",
+              ' w-full text-black  flex justify-center capitalize text-base relative font-medium  before:bg-primary-light before:w-[0%] before:h-1 before:absolute before:-bottom-2 before:left-0 before:transition-all before:duration-500 ',
+              isActive === link.link ? 'before:w-full text-primary-light' : '',
             )}
           >
             <span>{link.label}</span>

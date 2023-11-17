@@ -1,18 +1,15 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { MdOutlineChevronRight } from "react-icons/md";
+import React, { useState } from 'react';
+import { MdOutlineChevronRight } from 'react-icons/md';
 
 const SubscribeFooter = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   return (
     <div className="w-full min-[550px]:max-w-[300px] sm:max-w-[380px] flex flex-col border border-gray-300 rounded-lg p-2 sm:px-2 sm:py-4 max-[550px]:py-4">
       <form className="flex flex-col">
-        <label
-          htmlFor="subscribe"
-          className="font-medium text-sm sm:text-base text-color-600 "
-        >
+        <label htmlFor="subscribe" className="font-medium text-sm sm:text-base text-color-600 ">
           Subscribe to our newsletter
         </label>
         <div className="w-full flex border border-gray-300  rounded-lg pl-2 pr-1 py-1 mt-1 sm:mt-2 max-[550px]:mt-2 justify-between">
@@ -38,10 +35,9 @@ const SubscribeFooter = () => {
       <div className="hidden lg:flex flex-col gap-y-3 mt-10">
         <p className="font-medium text-lg text-color-600 ">About Us</p>
         <p className="text-sm text-color-normal">
-          Innovators in digital solutions, blending creativity with expertise to
-          elevate ideas and empower innovation. Your trusted partner for
-          cutting-edge software development, where challenges become
-          opportunities and visions become reality.
+          Innovators in digital solutions, blending creativity with expertise to elevate ideas and empower innovation.
+          Your trusted partner for cutting-edge software development, where challenges become opportunities and visions
+          become reality.
         </p>
       </div>
     </div>
