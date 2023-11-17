@@ -10,7 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#052C42",
-        primaryLight: "#2E577D",
+        "primary-light": "#2E577D",
+        "primary-dark": "#031824",
+        "color-600": "#161616",
+        "color-normal": "#535353",
       },
       fontFamily: {
         Worksans: ["Work Sans", "sans-serif"],

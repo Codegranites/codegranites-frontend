@@ -12,7 +12,7 @@
 
 # Description
 
-Revolutionary insights and Productivity
+Illuminating Ideas and Forging Solutions
 
 # Installation
 
