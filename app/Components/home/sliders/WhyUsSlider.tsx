@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel, { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel-react';
 import { DotButton, PrevButton, NextButton } from './SliderBtn';
 import slideByIdx from './slide';
+import LoadingSpinner from '../../loaders/LoadingSpinner';
 
 type PropType = {
   slides: number[];
@@ -42,7 +43,12 @@ const WhyUsSlider: React.FC<PropType> = (props) => {
     emblaApi.on('select', onSelect);
   }, [emblaApi, onInit, onSelect]);
 
-  return <div className="w-full max-w-[712px]">WhyUsSlider</div>;
+  return (
+    <div className="w-full max-w-[712px] flex flex-col justify-center items-center h-[300px]">
+      <LoadingSpinner />
+      <p className="animate-pulse text-3xl">Refactoring</p>
+    </div>
+  );
 };
 
 export default WhyUsSlider;
