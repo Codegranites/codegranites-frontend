@@ -7,6 +7,27 @@
   margin: 0 auto;
 }
 
+.embla__button {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.embla__buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;

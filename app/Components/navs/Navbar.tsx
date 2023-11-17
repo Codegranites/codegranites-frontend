@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <nav className="py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
-      <div className="w-fit">
+      <Link href="/?path=home" className="w-fit">
         <Image src="/logo.png" alt="logo" width={155} height={55} />
-      </div>
+      </Link>
 
       <div className="hidden lg:flex items-center gap-x-5 lg:gap-x-7 2xl:gap-x-10 w-full justify-center max-w-[50%] 2xl:max-w-[40%]">
         {NAV_LINKS.map((link) => (
@@ -42,7 +42,10 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-      <div className="hidden lg:flex">[Button] [Button]</div>
+      <div className="hidden lg:flex gap-x-3 xl:gap-x-5 [&>button]:border-primary-light [&>button]:border [&>button]:px-4 [&>button]:py-2 [&>button]:rounded-md [&>button:last-child]:bg-primary-light  [&>button:last-child]:text-white [&>button]:font-medium [&>button]:text-primary-light">
+        <button type="button">Login</button>
+        <button type="button">Get started</button>
+      </div>
       <div className="lg:hidden text-2xl">
         <FaBars />
       </div>
