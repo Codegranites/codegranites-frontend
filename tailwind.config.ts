@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#052C42",
+        primaryLight: "#2E577D",
+      },
       fontFamily: {
         Worksans: ["Work Sans", "sans-serif"],
       },

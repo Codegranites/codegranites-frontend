@@ -21,12 +21,12 @@ npm run check-lint ||
         false; 
 )
 
-echo '🏗️👷 checking for typescript errors' 🔍🧐
+echo '🏗️👷 Wait fess,checking for typescript errors' 🔍🧐
 
 # Check tsconfig standards
 npm run check-types ||
 (
-    echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡
+    echo '❌ Omo Failed Type check. ❌
             Are you seriously trying to write that? Make the changes required above.'
     false;
 )
