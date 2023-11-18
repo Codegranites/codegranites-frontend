@@ -11,7 +11,7 @@ const config: Config = {
        animation: {
         shimmer: "shimmer 1.5s infinite",
         slideUp: "slideUp 1s 0.2s ease forwards",
-        loadspin: "loadspin 1.5s linear infinite",
+        loadspin: "loadspin 1.2s linear infinite",
         pulsing: "pulsing 1.5s ease infinite",
       },
       keyframes: {
@@ -55,6 +55,8 @@ const config: Config = {
         "primary-dark": "#031824",
         "color-600": "#161616",
         "color-normal": "#535353",
+        "header": "#282828",
+        "card": "#FBF9FA"
       },
       fontFamily: {
         Worksans: ["Work Sans", "sans-serif"],
