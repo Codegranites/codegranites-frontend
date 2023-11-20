@@ -3,6 +3,12 @@ type InnovationProps = {
   title: string;
   description: string;
 };
+export type ClientSliderProps = {
+  id?: number;
+  name: string;
+  description: string;
+  currIdx?: number;
+};
 
 export const INNOVATION_SLIDES: InnovationProps[] = [
   {
@@ -34,6 +40,39 @@ export const INNOVATION_SLIDES: InnovationProps[] = [
     title: 'Coding Dreams into Reality',
     description:
       'At the core of our mission is turning dreams into reality through code. Join us on a journey where every line of code propels your vision closer to fruition.',
+  },
+];
+
+export const CLIENT_SLIDES: ClientSliderProps[] = [
+  {
+    id: 1,
+    name: 'Damon Willis, CEO, Apple',
+    description:
+      ' Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
+  },
+  {
+    id: 2,
+    name: 'Arinze, CEO, Github',
+    description:
+      'Codegranites is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 3,
+    name: 'Paul Wilson, AI, Flexable AI',
+    description:
+      'Flexable AI is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 4,
+    name: 'Mimi Kibet, CTO, SaaS Company',
+    description:
+      'SaaS is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 5,
+    name: 'Ashley Smith, CEO, Commerce X',
+    description:
+      'Commerce X is an online e-commerce platform. We are committed to delivering exceptional content for our clients.',
   },
 ];
 
