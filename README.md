@@ -43,6 +43,7 @@ npm run dev
 - Tailwindcss
 - Sass
 - Tw-merge + clsx(for conditional classes)
+- Embla Carousel
 
 # Usage
 
