@@ -9,6 +9,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import './slider.scss';
 import cn from '@/utils/tailwind';
 import TestimonialCard from '../card/TestimonialCard';
+import useInView from '@/hooks/useInView';
 
 type PropType = {
   slides: number[];
@@ -16,6 +17,8 @@ type PropType = {
 };
 
 const ClientSlider = () => {
+  const slideRef = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(slideRef);
   const options: EmblaOptionsType = { loop: true, duration: 10 };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
@@ -44,7 +47,13 @@ const ClientSlider = () => {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center md:h-[400px] xl:h-[500px] relative p-8 embla overflow-hidden  border border-gray-300 py-4 lg:py-8  xl:py-12 pb-8">
+    <div
+      ref={slideRef}
+      className={cn(
+        'w-full flex flex-col justify-center items-center md:h-[400px] xl:h-[500px] relative p-8 embla overflow-hidden  border border-gray-300 py-4 lg:py-8  xl:py-12 pb-8',
+        isInView ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
+      )}
+    >
       <div className="overflow-hidden w-full " ref={emblaRef}>
         <div className="embla__container flex touch-pan-y w-full ">
           {CLIENT_SLIDES.map((slide) => (

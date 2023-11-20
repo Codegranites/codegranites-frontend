@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { ClientSliderProps } from '../sliders/slide';
 import cn from '@/utils/tailwind';
+import useInView from '@/hooks/useInView';
 
 const TestimonialCard = ({ name, description, currIdx = 0, id }: ClientSliderProps) => {
   return (

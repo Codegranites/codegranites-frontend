@@ -8,16 +8,10 @@ import React from 'react';
 import ClientSlider from './sliders/ClientSlider';
 
 const Clients = () => {
-  const clientRef = React.useRef<HTMLDivElement>(null);
+  const clientRef = React.useRef<HTMLHeadingElement>(null);
   const isInView = useInView(clientRef);
   return (
-    <section
-      ref={clientRef}
-      className={cn(
-        'w-full h-screen flex flex-col items-center ',
-        isInView ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
-      )}
-    >
+    <section className={cn('w-full h-screen flex flex-col items-center ')}>
       <h2
         ref={clientRef}
         className={cn(
