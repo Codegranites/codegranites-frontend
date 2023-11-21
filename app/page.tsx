@@ -4,7 +4,6 @@ import WhyUs from './Components/home/WhyUs';
 import HowItWorks from './Components/about/OurValues';
 import Clients from './Components/home/Clients';
 
-
 export default function Home() {
   return (
     <>
