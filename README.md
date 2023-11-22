@@ -44,6 +44,7 @@ npm run dev
 - Sass
 - Tw-merge + clsx(for conditional classes)
 - Embla Carousel
+- NextUI
 
 # Usage
 

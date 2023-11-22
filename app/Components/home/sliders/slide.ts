@@ -3,6 +3,12 @@ type InnovationProps = {
   title: string;
   description: string;
 };
+export type ClientSliderProps = {
+  id?: number;
+  name: string;
+  description: string;
+  currIdx?: number;
+};
 
 export const INNOVATION_SLIDES: InnovationProps[] = [
   {
@@ -13,27 +19,66 @@ export const INNOVATION_SLIDES: InnovationProps[] = [
   },
   {
     id: 2,
-    title: 'Creative Fusion',
+    title: 'Tailored Solution, Every time',
     description:
-      'Explore boundless creativity as we blend artistry with technology. Our team envisions and delivers digital solutions that redefine the way we experience the online world.',
+      'We understand that every challenge is unique, Our experts work closely with you to craft bespoke IT solutions that precisely address your specific needs, ensuring unparalleled results.',
   },
   {
     id: 3,
-    title: 'Digital Excellence',
+    title: 'Future-ready Technology',
     description:
-      'Embark on a journey of digital excellence. We meticulously craft each project, ensuring it not only meets but exceeds the highest standards of innovation and functionality.',
+      'Stay ahead in a rapidly evolving digital landscape. CodeGranites leverages the latest technologies to ensure your project is not just current but future-proof, prodiving lasting value and adaptability.',
   },
   {
     id: 4,
-    title: 'Future-Forward Solutions',
+    title: 'Passion for positive impact',
     description:
-      'Step into the future with our cutting-edge solutions. We anticipate trends, adapt to change, and build the next generation of digital experiences for your success.',
+      'Beyond technology, we are driven by passion for creating positive change. Join us in harnessing the power of IT to overcome societal challenges and make a meaningful impact on the world',
   },
   {
     id: 5,
-    title: 'Coding Dreams into Reality',
+    title: 'Transparent Collaboration',
     description:
-      'At the core of our mission is turning dreams into reality through code. Join us on a journey where every line of code propels your vision closer to fruition.',
+      'Experience a partnership built on trust and transparency. Throughout the project lifecycle, we keep you informed, involved and empowered, fostering a collaborative environment that ensures project success.',
+  },
+  {
+    id: 6,
+    title: 'Uncompromising Quality',
+    description:
+      'Quality is at the core of everything we do. CodeGranites is committed to delivering solutions that not only meet but exceed industry standards. Your success is our success.',
+  },
+];
+
+export const CLIENT_SLIDES: ClientSliderProps[] = [
+  {
+    id: 1,
+    name: 'Damon Willis, CEO, Apple',
+    description:
+      ' Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
+  },
+  {
+    id: 2,
+    name: 'Arinze, CEO, Github',
+    description:
+      'Codegranites is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 3,
+    name: 'Paul Wilson, AI, Flexable AI',
+    description:
+      'Flexable AI is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 4,
+    name: 'Mimi Kibet, CTO, SaaS Company',
+    description:
+      'SaaS is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+  },
+  {
+    id: 5,
+    name: 'Ashley Smith, CEO, Commerce X',
+    description:
+      'Commerce X is an online e-commerce platform. We are committed to delivering exceptional content for our clients.',
   },
 ];
 

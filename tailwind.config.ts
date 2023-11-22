@@ -15,6 +15,7 @@ const config: Config = {
         slideUp: "slideUp 1s 0.2s ease forwards",
         loadspin: "loadspin 1.2s linear infinite",
         pulsing: "pulsing 1.5s ease infinite",
+        rotate3d: "rotate3d 2s 1s linear infinite",
       },
       keyframes: {
         pulsing: {
@@ -50,6 +51,16 @@ const config: Config = {
             opacity: "1",
           },
         },
+        rotate3d: {
+          "0%": {
+            transform: "rotateY(0)",
+          },
+          "50%":{opacity: "0.5"},
+
+          "100%": {
+            transform: "rotateY(360deg)",
+          },
+        },
       },
       colors: {
         primary: "#052C42",
@@ -62,6 +73,7 @@ const config: Config = {
       },
       fontFamily: {
         Worksans: ["Work Sans", "sans-serif"],
+        tommy: ["MADE TOMMY Outline", "sans-serif"],
       },
     },
   },

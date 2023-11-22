@@ -7,11 +7,14 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import MobileNav from './MobileNav';
+import { useStateCtx } from '@/context/StateContext';
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState('');
+  const { showMobileMenu, setShowMobileMenu } = useStateCtx();
   const searchParams = useSearchParams().get('path');
 
+  const [isActive, setIsActive] = useState('');
   useEffect(() => {
     if (searchParams) {
       setIsActive(searchParams);
@@ -20,8 +23,8 @@ const Navbar = () => {
   }, [searchParams]);
 
   return (
-    <nav className="py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
-      <Link href="/?path=home" className="w-fit">
+    <nav className="max-[500px]:py-2 py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
+      <Link href="/?path=home" className="w-fit max-sm:w-[120px] max-[450px]:w-[100px]">
         <Image src="/logo.png" alt="logo" width={155} height={55} />
       </Link>
 
@@ -46,9 +49,15 @@ const Navbar = () => {
         <button type="button">Login</button>
         <button type="button">Get started</button>
       </div>
-      <div className="lg:hidden text-2xl">
+      <div
+        tabIndex={0}
+        className="lg:hidden text-2xl cursor-pointer focus:border border-primary focus:p-1 focus:rounded-md"
+        onClick={() => setShowMobileMenu(true)}
+      >
         <FaBars />
       </div>
+
+      <MobileNav />
     </nav>
   );
 };
