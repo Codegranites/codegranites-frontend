@@ -11,7 +11,7 @@ const Clients = () => {
   const clientRef = React.useRef<HTMLHeadingElement>(null);
   const isInView = useInView(clientRef);
   return (
-    <section className={cn('w-full h-screen flex flex-col items-center ')}>
+    <section className={cn('w-full mb-10 flex flex-col items-center ')}>
       <h2
         ref={clientRef}
         className={cn(

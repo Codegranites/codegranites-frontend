@@ -6,7 +6,7 @@ import { OurValues } from '@/libs/constants';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
 
-const HowItWorks = () => {
+const OurValuesSection = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const isInView = useInView(worksRef);
@@ -39,4 +39,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default OurValuesSection;

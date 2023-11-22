@@ -37,6 +37,12 @@ export type ServicesProps = {
   icon: string;
 };
 
+export type FAQsProps = {
+  id: number;
+  question: string;
+  answer: string;
+};
+
 export const NAV_LINKS: NavbarLinkProps[] = [
   { id: 1, link: 'home', label: 'home' },
   { id: 2, link: 'services', label: 'services' },
@@ -169,5 +175,37 @@ export const Services: ServicesProps[] = [
     description:
       'Guiding your business through the digital evolution, ensuring relevance and agility in a rapidly changing landscape.',
     icon: stack,
+  },
+];
+
+export const FAQS: FAQsProps[] = [
+  {
+    id: 1,
+    question: 'What sets Codegranites apart from other IT service providers?',
+    answer:
+      'At Codegranites, we stand out through our commitment to innovation, tailor-made solutions, and a client-centric approach. We prioritize understanding your unique challenges to deliver transformative results.',
+  },
+  {
+    id: 2,
+    question: 'How do I submit a project proposal to CodeGranites?',
+    answer:
+      'Submitting a project proposal is easy! Just fill our submission form. Provide the necessary details, and our team will get in touch with you promptly',
+  },
+  {
+    id: 3,
+    question: 'What type of projects does CodeGranites specialize in?',
+    answer:
+      'We specialize in a wide range of projects, including IT consulting, custom software development, emerging technologies integration, digital transformation, cybersecurity solutions, and cloud computing.',
+  },
+  {
+    id: 4,
+    question: 'Can I join a team or do I have to come with one?',
+    answer: 'Yes, you can.',
+  },
+  {
+    id: 5,
+    question: 'Can I get a consultation before starting a project with CodeGranites?',
+    answer:
+      'Absolutely! We offer initial consultations to understand your project requirements and discuss potential solutions. Get in touch here',
   },
 ];
