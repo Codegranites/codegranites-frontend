@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Hero from './Components/home/Hero';
 import WhyUs from './Components/home/WhyUs';
-import HowItWorks from './Components/about/OurValues';
+
 import Clients from './Components/home/Clients';
+import { FAQs } from './Components/home/FAQs';
+import HowItWorks from './Components/home/HowItWorks';
+import Butt from './Components/services/Butt';
 
 export default function Home() {
   return (
@@ -12,6 +15,8 @@ export default function Home() {
         <WhyUs />
         <HowItWorks />
         <Clients />
+        <FAQs />
+        <Butt />
       </main>
     </>
   );
