@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <main className="max-container w-full flex flex-col">
         <AboutUs />
-        <MissionVision/>
+        <MissionVision />
         <OurValues />
         <Butt />
       </main>

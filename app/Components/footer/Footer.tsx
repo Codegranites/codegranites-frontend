@@ -39,10 +39,9 @@ const Footer = () => {
                     uppercase: link.link === 'faq',
                   })}
                 >
-                  <Link href={`/${link.link}`} className='w-full'>
+                  <Link href={`/${link.link}`} className="w-full">
                     {link.label}
                   </Link>
-                  
                 </li>
               ))}
             </ul>
