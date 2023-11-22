@@ -1,9 +1,9 @@
 import React from 'react';
-import Input from '../UI/Input';
-import Button from '../UI/Button';
+import Input from '../Components/UI/Input';
+import Button from '../Components/UI/Button';
 import cn from '@/utils/tailwind';
 import useInView from '@/hooks/useInView';
-import Label from '../UI/Label';
+import Label from '../Components/UI/Label';
 
 const Right = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
