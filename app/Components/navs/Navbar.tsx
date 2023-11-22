@@ -23,8 +23,8 @@ const Navbar = () => {
   }, [searchParams]);
 
   return (
-    <nav className="max-[500px]:py-1 py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
-      <Link href="/?path=home" className="w-fit max-sm:w-[120px]">
+    <nav className="max-[500px]:py-2 py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
+      <Link href="/?path=home" className="w-fit max-sm:w-[120px] max-[450px]:w-[100px]">
         <Image src="/logo.png" alt="logo" width={155} height={55} />
       </Link>
 
