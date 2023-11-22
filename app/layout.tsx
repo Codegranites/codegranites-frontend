@@ -3,6 +3,7 @@ import { Work_Sans } from 'next/font/google';
 import './Styles/globals.scss';
 import Navbar from '@/app/Components/navs/Navbar';
 import Footer from '@/app/Components/footer/Footer';
+import { Providers } from '../app/provider';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={workSans.variable}>
       <body className={workSans.className}>
         <Navbar />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

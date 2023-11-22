@@ -6,6 +6,7 @@ import Label from './Label';
 interface BaseInputProps {
   label?: string;
   type?: string;
+  placeholder?: string;
   error?: boolean;
   required?: boolean;
   disabled?: boolean;
@@ -20,6 +21,7 @@ const Input: React.FC<BaseInputProps> = (props) => {
   const {
     label,
     type = 'text',
+    placeholder,
     error = false,
     required = false,
     disabled = false,
@@ -58,6 +60,7 @@ const Input: React.FC<BaseInputProps> = (props) => {
       <input
         id={id}
         type={type}
+        placeholder={placeholder}
         className={clsx([
           styles.base,
           rounded && styles.rounded[rounded],

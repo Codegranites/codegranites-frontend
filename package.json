@@ -14,11 +14,14 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "clsx": "^2.0.0",
     "embla-carousel-autoplay": "^8.0.0-rc14",
     "embla-carousel-react": "^8.0.0-rc14",
+    "framer-motion": "^10.16.5",
     "heroicons": "^2.0.18",
     "husky": "^8.0.3",
+    "iconsax-react": "^0.0.8",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
