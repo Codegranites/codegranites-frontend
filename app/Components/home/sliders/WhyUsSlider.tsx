@@ -54,9 +54,5 @@ const WhyUsSlider = () => {
     </div>
   );
 };
-{
-  /* <LoadingSpinner />
-<p className="animate-pulse text-3xl">Refactoring</p> */
-}
 
 export default WhyUsSlider;
