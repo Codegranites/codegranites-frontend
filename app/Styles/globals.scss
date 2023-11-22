@@ -20,6 +20,24 @@
   perspective: 1000px;
 }
 
+.image-bounce {
+  animation: bounce 2s infinite;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-5%);
+    }
+    50% {
+      transform: none;
+    }
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;

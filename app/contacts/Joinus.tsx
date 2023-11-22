@@ -2,9 +2,8 @@
 import React from 'react';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
-import Button from '../UI/Button';
+import Button from '../Components/UI/Button';
 import Image from 'next/image';
-import contactTwo from '../../../public/contactTwo.png';
 
 const Joinus = () => {
   const text = 'Get started';
@@ -19,7 +18,13 @@ const Joinus = () => {
           isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
         )}
       >
-        <Image className="lg:w-screen h-[66vh] object-cover" src={contactTwo} alt="Background Image"></Image>
+        <Image
+          className="lg:w-screen h-[66vh] object-cover"
+          src="/contactTwo.jpeg"
+          alt="Background Image"
+          width={1000}
+          height={500}
+        />
       </div>
 
       <div

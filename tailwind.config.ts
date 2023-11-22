@@ -16,6 +16,7 @@ const config: Config = {
         loadspin: "loadspin 1.2s linear infinite",
         pulsing: "pulsing 1.5s ease infinite",
         rotate3d: "rotate3d 2s 1s linear infinite",
+        
       },
       keyframes: {
         pulsing: {

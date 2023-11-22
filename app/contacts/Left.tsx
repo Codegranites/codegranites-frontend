@@ -1,11 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import x from '../../../public/icons/x.png';
-import linkedin from '../../../public/icons/Social Icon.png';
-import ig from '../../../public/icons/ig.png';
-import fb from '../../../public/icons/fb.png';
-import cone from '../../../public/Ellipse 9.png';
-import circle from '../../../public/Ellipse 10.png';
 import cn from '@/utils/tailwind';
 import useInView from '@/hooks/useInView';
 
@@ -118,18 +112,26 @@ const Left = () => {
       </div>
 
       <div className="flex justify-between items-center gap-3 pl-3 absolute lg:bottom-[25%] left-[5%]">
-        <Image className="z-50" src={ig} width="25" height="25" alt="Instagram Icon" />
-        <Image className="z-50" src={fb} width="25" height="25" alt="Facebook Icon" />
-        <Image className="z-50 " src={x} width="25" height="25" alt="X Icon" />
-        <Image className="z-50" src={linkedin} width="25" height="25" alt="Linkedin Icon" />
+        <Image className="z-50" src="/icons/ig.png" width="25" height="25" alt="Instagram Icon" />
+        <Image className="z-50" src="/icons/fb.png" width="25" height="25" alt="Facebook Icon" />
+        <Image className="z-50 " src="/icons/x.png" width="25" height="25" alt="X Icon" />
+        <Image className="z-50" src="/icons/linked-in.png" width="25" height="25" alt="Linkedin Icon" />
       </div>
 
       <Image
         className="hidden lg:flex z-50 w-[10em] absolute bottom-[10%] right-[28%] opacity-50"
-        src={circle}
+        src="/ellipse-10.png"
         alt="Circle"
+        width={200}
+        height={200}
       />
-      <Image className="hidden lg:flex w-[18em] absolute bottom-0 right-0" src={cone} alt="Cone" />
+      <Image
+        className="hidden lg:flex w-[18em] absolute bottom-0 right-0"
+        src="/ellipse-9.png"
+        alt="Cone"
+        width={300}
+        height={500}
+      />
     </div>
   );
 };
