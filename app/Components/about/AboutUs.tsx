@@ -6,6 +6,8 @@ import abt from '../../../public/abtsec1.svg';
 import abt2 from '../../../public/abtsec2.svg';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
+import { APPROACH } from '@/libs/constants';
+import list from "../../../public/icons/list.svg"
 
 const AboutUs = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
@@ -14,7 +16,7 @@ const AboutUs = () => {
   const isInView2 = useInView(titleRef);
 
   return (
-    <section className="my-8 lg:my-20 h-[830px] w-full flex flex-col items-center">
+    <section className="my-8 lg:my-20 w-full flex flex-col items-center">
       <h2
         ref={titleRef}
         className={cn(
@@ -28,11 +30,24 @@ const AboutUs = () => {
       <div>
         <div className="flex">
           <div>
-            <h2>Our Product Summary</h2>
-            <p>
-              At Code Granites, we design and develop innovative digital solutions that go beyond expectations. From
-              custom software to web and mobile applications, we craft products that elevate businesses to new heights.
-            </p>
+            <div>
+              <h2>Our Product Summary</h2>
+              <p>
+                  At Code Granites, we design and develop innovative digital solutions that go beyond expectations. From
+                  custom software to web and mobile applications, we craft products that elevate businesses to new heights.
+              </p>
+            </div>
+            <div>
+              <h2>Our Approach</h2>
+              <ul>
+                {APPROACH.map((item) => (
+                  <li key={item.id}>
+                    <Image src={list} alt={`Images-${item.id}`} />
+                    <span>{ item.details}</span>
+                  </li>
+                ) )}
+              </ul>
+            </div>
           </div>
           <div>
             <div className="relative ">

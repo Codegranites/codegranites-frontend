@@ -4,6 +4,7 @@ import SubscribeFooter from './SubscribeFooter';
 import { FOOTER_LINKS } from '@/libs/constants';
 import cn from '@/utils/tailwind';
 import { BsTwitterX } from 'react-icons/bs';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -38,7 +39,10 @@ const Footer = () => {
                     uppercase: link.link === 'faq',
                   })}
                 >
-                  {link.label}
+                  <Link href={`/${link.link}`} className='w-full'>
+                    {link.label}
+                  </Link>
+                  
                 </li>
               ))}
             </ul>
