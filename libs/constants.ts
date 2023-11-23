@@ -43,6 +43,17 @@ export type FAQsProps = {
   answer: string;
 };
 
+export type ApproachProps = {
+  id: number;
+  details: string;
+};
+
+export type PrivavyProps = {
+  id: number;
+  header: string;
+  details: string;
+};
+
 export const NAV_LINKS: NavbarLinkProps[] = [
   { id: 1, link: 'home', label: 'home' },
   { id: 2, link: 'services', label: 'services' },
@@ -202,5 +213,67 @@ export const FAQS: FAQsProps[] = [
     question: 'Can I get a consultation before starting a project with CodeGranites?',
     answer:
       'Absolutely! We offer initial consultations to understand your project requirements and discuss potential solutions. Get in touch here',
+  },
+];
+
+export const APPROACH: ApproachProps[] = [
+  {
+    id: 1,
+    details: 'Client-centric approach',
+  },
+  {
+    id: 2,
+    details: 'Attention to Detail',
+  },
+  {
+    id: 3,
+    details: 'Collaboration',
+  },
+  {
+    id: 4,
+    details: 'Fransparency and flexibility',
+  },
+  {
+    id: 5,
+    details: 'Flexibility and Innovation',
+  },
+];
+
+export const PRIVACY_POLICY: PrivavyProps[] = [
+  {
+    id: 1,
+    header: 'Privacy Policy',
+    details:
+      'At Code Granites, we are committed to protecting your privacy and ensuring the security of your personal information. Our Privacy Policy outlines how we collect, use, and safeguard your data when you interact with our website and services.',
+  },
+  {
+    id: 2,
+    header: 'What this Privacy Policy Covers',
+    details:
+      'At Code Granites, we are committed to protecting your privacy and ensuring the security of your personal information. Our Privacy Policy outlines how we collect, use, and safeguard your data when you interact with our website and services.',
+  },
+  {
+    id: 3,
+    header: 'Information Collection',
+    details:
+      'We collect only the necessary information required to provide you with our services and enhance your user experience.',
+  },
+  {
+    id: 4,
+    header: 'Data Security',
+    details:
+      'Your data is treated with the utmost confidentiality, and we employ industry-standard security measures to protect it from unauthorized access.',
+  },
+  {
+    id: 5,
+    header: 'Third-Party Disclosure',
+    details:
+      'We do not sell, trade, or otherwise transfer your personally identifiable information to third parties without your consent.',
+  },
+  {
+    id: 6,
+    header: 'Cookie Usage',
+    details:
+      'Our website may use cookies to improve user experience. You can manage cookie preferences through your browser settings.',
   },
 ];
