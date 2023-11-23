@@ -63,15 +63,21 @@ export const NAV_LINKS: NavbarLinkProps[] = [
 
 export const FOOTER_LINKS: FooterLinkProps = {
   company: [
-    { id: 1, link: 'services', label: 'services' },
-    { id: 2, link: 'about', label: 'about us' },
-    { id: 3, link: 'contacts', label: 'contacts' },
-    { id: 4, link: 'jobs', label: 'jobs' },
+    { id: 1, link: 'services?path=services', label: 'services' },
+    { id: 2, link: 'about?path=about', label: 'about us' },
+    { id: 3, link: 'contacts?path=contacts', label: 'contacts' },
+    { id: 4, link: 'jobs?path=jobs', label: 'jobs' },
   ],
   help: [
+<<<<<<< HEAD
     { id: 1, link: 'faq', label: 'faq' },
     { id: 2, link: 'terms', label: 'terms of services' },
     { id: 3, link: 'privacy-policy', label: 'privacy policy' },
+=======
+    { id: 1, link: 'faq?path=faq', label: 'faq' },
+    { id: 2, link: 'terms?path=terms', label: 'terms of services' },
+    { id: 3, link: 'privacy?path=privacy', label: 'privacy policy' },
+>>>>>>> c3078daed90b87d9aaaffba73b1fd738ecb81df0
   ],
   emails: [
     { id: 1, email: 'Info@codesgranite.com' },
@@ -210,11 +216,6 @@ export const FAQS: FAQsProps[] = [
   },
   {
     id: 4,
-    question: 'Can I join a team or do I have to come with one?',
-    answer: 'Yes, you can.',
-  },
-  {
-    id: 5,
     question: 'Can I get a consultation before starting a project with CodeGranites?',
     answer:
       'Absolutely! We offer initial consultations to understand your project requirements and discuss potential solutions. Get in touch here',

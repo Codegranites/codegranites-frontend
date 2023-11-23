@@ -17,32 +17,35 @@ const Footer = () => {
               <SubscribeFooter />
             </div>
           </div>
-          <div className="flex max-[550px]:flex-col max-[550px]:gap-y-7 w-full justify-between items-start [&>ul>span]:text-[#535353] [&>ul>span]:text-base [&>ul>span]:font-semibold [&>ul>li]:text-[#535353] [&>ul>li]:text-base">
+          <div className="flex max-[550px]:flex-col max-[550px]:gap-y-7 w-full justify-between items-start [&>ul>span]:text-[#535353] [&>ul>span]:text-base [&>ul>span]:font-semibold [&>ul>a]:text-[#535353] [&>ul>a]:text-base ">
             <div className="w-full max-w-[380px] hidden lg:block">
               <SubscribeFooter />
             </div>
             <ul className="flex flex-col gap-y-5 max-[550px]:gap-y-3">
               <span>Company</span>
               {FOOTER_LINKS.company.map((link) => (
-                <li key={link.id} className="capitalize">
+                <Link
+                  href={link.link}
+                  key={link.id}
+                  className="capitalize hover:font-medium hover:text-primary transition-colors duration-300"
+                >
                   {link.label}
-                </li>
+                </Link>
               ))}
             </ul>
 
             <ul className="flex flex-col gap-y-5 max-[550px]:gap-y-3">
               <span>Help</span>
               {FOOTER_LINKS.help.map((link) => (
-                <li
+                <Link
+                  href={link.link}
                   key={link.id}
-                  className={cn('capitalize', {
-                    uppercase: link.link === 'faq',
+                  className={cn('capitalize hover:font-medium hover:text-primary transition-colors duration-300', {
+                    uppercase: link.label === 'faq',
                   })}
                 >
-                  <Link href={`/${link.link}`} className="w-full">
-                    {link.label}
-                  </Link>
-                </li>
+                  {link.label}
+                </Link>
               ))}
             </ul>
             <ul className="flex flex-col gap-y-5 max-[550px]:gap-y-3">

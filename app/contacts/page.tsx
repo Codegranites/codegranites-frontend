@@ -6,12 +6,12 @@ import Joinus from './Joinus';
 
 const ContactUs = () => {
   return (
-    <div>
+    <>
       <ContactHero />
       <Form />
       <Faq />
       <Joinus />
-    </div>
+    </>
   );
 };
 

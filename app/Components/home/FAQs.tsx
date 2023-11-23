@@ -2,12 +2,14 @@
 
 import { FAQS } from '@/libs/constants';
 import cn from '@/utils/tailwind';
+import { useInView } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { BsChevronBarRight, BsChevronRight, BsChevronUp } from 'react-icons/bs';
 
 export const FAQs = () => {
-  const [showFaq, setShowFaq] = useState(new Array(FAQS.length).fill(false));
+  const faqRef = React.useRef<HTMLElement>(null);
+  const isInView = useInView(faqRef);
   const [openIndex, setopenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -15,7 +17,13 @@ export const FAQs = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center w-full items-center py-20 relative z-10 ">
+    <section
+      ref={faqRef}
+      className={cn(
+        'flex flex-col justify-center w-full items-center py-20 relative z-10 ',
+        isInView ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
+      )}
+    >
       <div className="flex mb-20 w-full justify-center">
         <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-header">
           Frequently Asked Questions
@@ -29,14 +37,14 @@ export const FAQs = () => {
                 <div
                   key={faq.id}
                   className={cn(
-                    'relative text-[15px] items-start flex w-full justify-between  gap-4 xl:gap-8 border border-[#cdcdcd] gap-x-10 min-h-[90px] px-2 pt-4',
-                    openIndex === index ? 'pb-4 ' : '',
+                    'relative text-[15px] flex w-full justify-between   xl:gap-8 border border-[#cdcdcd] sm:gap-x-10 sm:min-h-[90px] px-2 pt-1 sm:pt-4',
+                    openIndex === index ? ' sm:pb-4 gap-4 items-start' : ' items-center',
                   )}
                 >
-                  <div className="flex flex-col gap-y-5 items-start ">
+                  <div className={cn('flex flex-col  items-start ', openIndex === index ? ' gap-y-5' : '')}>
                     <h3
                       onClick={() => toggleFaq(index)}
-                      className="text-lg tracking-tight font-medium text-gray-800 bg-white"
+                      className="text-[14px] sm:text-lg tracking-tight font-medium text-gray-800 bg-white"
                     >
                       {faq.question}
                     </h3>
@@ -57,7 +65,7 @@ export const FAQs = () => {
                     tabIndex={0}
                     onClick={() => toggleFaq(index)}
                     className={cn(
-                      'text-[#cdcdcd] text-[28px] font-medium select-none outline-none cursor-pointer h-12 max-w-[50px] focus:border border-[#cdcdcd] w-full flex items-center justify-center transition-all duration-500 relative z-20',
+                      'text-[#cdcdcd] text-lg sm:text-[28px] font-medium select-none outline-none cursor-pointer sm:h-12 sm:max-w-[50px] focus:border border-[#cdcdcd] sm:w-full flex items-center justify-center transition-all duration-500 relative z-20',
                       openIndex === index ? '[&>svg]:-rotate-90 ' : '',
                     )}
                   >
@@ -83,13 +91,13 @@ export const FAQs = () => {
               <span className="font-tommy absolute right-0  text-5xl -bottom-8 scale-y-125">?</span>
             </div>
           </div>
-          <div className="hidden lg:flex w-full  p-6 relative items-center justify-center">
+          <div className="hidden lg:flex w-full  p-6 relative items-center justify-center image-bounce">
             <Image src={'/illustrations/faq-image.png'} alt="judging" width={800} height={800} />
           </div>
         </div>
       </div>
       <div className="lg:hidden flex w-full justify-center mt-4">
-        <p className="text-lg">
+        <p className="text-sm sm:text-lg w-full text-center">
           Have more questions? Contact our <span className="text-[#eea300]">Support</span> Team
         </p>
       </div>
