@@ -69,15 +69,9 @@ export const FOOTER_LINKS: FooterLinkProps = {
     { id: 4, link: 'jobs?path=jobs', label: 'jobs' },
   ],
   help: [
-<<<<<<< HEAD
-    { id: 1, link: 'faq', label: 'faq' },
-    { id: 2, link: 'terms', label: 'terms of services' },
-    { id: 3, link: 'privacy-policy', label: 'privacy policy' },
-=======
     { id: 1, link: 'faq?path=faq', label: 'faq' },
     { id: 2, link: 'terms?path=terms', label: 'terms of services' },
     { id: 3, link: 'privacy?path=privacy', label: 'privacy policy' },
->>>>>>> c3078daed90b87d9aaaffba73b1fd738ecb81df0
   ],
   emails: [
     { id: 1, email: 'Info@codesgranite.com' },
