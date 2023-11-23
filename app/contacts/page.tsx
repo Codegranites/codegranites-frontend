@@ -1,18 +1,18 @@
-import React from 'react'
-import ContactHero from '../Components/contacts/ContactHero'
-import Form from '../Components/contacts/Form'
-import Faq from '../Components/contacts/Faq'
-import Joinus from '../Components/contacts/Joinus'
+import React from 'react';
+import ContactHero from './ContactHero';
+import Form from './Form';
+import Faq from './Faq';
+import Joinus from './Joinus';
 
-const page = () => {
+const ContactUs = () => {
   return (
-    <div>
-      <ContactHero/>
-      <Form/>
-      <Faq/>
-      <Joinus/>
-    </div>
-  )
-}
+    <>
+      <ContactHero />
+      <Form />
+      <Faq />
+      <Joinus />
+    </>
+  );
+};
 
-export default page
+export default ContactUs;

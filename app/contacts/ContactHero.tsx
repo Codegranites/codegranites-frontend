@@ -3,21 +3,26 @@ import React from 'react';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
 import Image from 'next/image';
-import contactOne from '../../../public/contactOne.jpeg';
 
 const ContactHero = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const isInView2 = useInView(titleRef);
   return (
-    <section className="relative h-[63vh] w-full">
+    <section className="relative h-[63vh] w-full ">
       <div
         className={cn(
           'absolute',
           isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
         )}
       >
-        <Image className="lg:w-screen h-[66vh] object-cover" src={contactOne} alt="Background Image"></Image>
+        <Image
+          className="lg:w-screen h-[66vh] object-cover"
+          src="/contactOne.jpeg"
+          alt="Background Image"
+          width={1000}
+          height={500}
+        ></Image>
       </div>
 
       <div

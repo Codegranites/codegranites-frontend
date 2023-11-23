@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 import { ClientSliderProps } from '../sliders/slide';
 import cn from '@/utils/tailwind';
-import useInView from '@/hooks/useInView';
 
 const TestimonialCard = ({ name, description, currIdx = 0, id }: ClientSliderProps) => {
   return (
@@ -13,7 +12,7 @@ const TestimonialCard = ({ name, description, currIdx = 0, id }: ClientSliderPro
       )}
     >
       <div className="flex max-md:justify-center items-center w-full max-w-[200px] md:max-w-[300px] relative md:max-h-[250px] md:h-full">
-        <Image src="/client/client-1.png" height={250} width={250} alt="client" className="relative z-10 " />
+        <Image src={`/client/client-${id}.png`} height={250} width={250} alt="client" className="relative z-10 " />
         <div className="absolute -left-4 -top-2  md:-top-5 md:-left-5 w-[200px] h-[200px] md:w-[270px] md:h-[270px] bg-[#F3DE8A] rounded-full" />
       </div>
       <div className="flex flex-col md:w-[70%] gap-y-5 lg:gap-y-10 items-start -mt-5 lg:-mt-10">
@@ -21,7 +20,7 @@ const TestimonialCard = ({ name, description, currIdx = 0, id }: ClientSliderPro
           <Image src="/icons/quote.svg" height={64} width={64} alt="quote" />
         </div>
         <p className="text-header text-sm md:text-base">{description}</p>
-        <p className="text-black font-medium text-sm md:text-base">— [{name}]</p>
+        <p className="text-black font-medium text-sm md:text-base">{name}</p>
       </div>
     </div>
   );

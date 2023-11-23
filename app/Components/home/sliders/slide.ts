@@ -52,33 +52,39 @@ export const INNOVATION_SLIDES: InnovationProps[] = [
 export const CLIENT_SLIDES: ClientSliderProps[] = [
   {
     id: 1,
-    name: 'Damon Willis, CEO, Apple',
+    name: '— [Damon Willis, CEO, XYZ Company]',
     description:
       ' Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
   },
   {
     id: 2,
-    name: 'Arinze, CEO, Github',
+    name: '— [Sarah WIllocks, CEO, XYZ Company]',
     description:
-      'Codegranites is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+      'Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
   },
   {
     id: 3,
-    name: 'Paul Wilson, AI, Flexable AI',
+    name: '— [Jasmine Okoro, CEO, XYZ Company]',
     description:
-      'Flexable AI is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+      'Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
   },
   {
     id: 4,
-    name: 'Mimi Kibet, CTO, SaaS Company',
+    name: '— [Jonathan Nwali, CEO, XYZ Company]',
     description:
-      'SaaS is a leading provider of digital content and services. We are committed to delivering exceptional content for our clients.',
+      'Working with Codegranites was a game-changer for us. Their teams expertise and commitment to excellence were evident at every stage of the project. We are now equipped with a solution that not only meets but exceeds our business goals',
   },
   {
     id: 5,
-    name: 'Ashley Smith, CEO, Commerce X',
+    name: '— [Jan Xing, CEO, XYZ Company]',
     description:
-      'Commerce X is an online e-commerce platform. We are committed to delivering exceptional content for our clients.',
+      'Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
+  },
+  {
+    id: 6,
+    name: '— [Xao Uchida, CEO, XYZ Company]',
+    description:
+      'Codegranites truly exceeded our expectations. Their innovative solutions and dedication to understanding our unique challenges made the collaboration seamless. We not only got a product but a transformative experience.',
   },
 ];
 
