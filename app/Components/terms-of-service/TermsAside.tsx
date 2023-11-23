@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const TermsAside = () => {
   return (
-    <div className='w-[23%] hidden md:flex md:flex-col lg:flex-col lg:flex py-[1em] pl-[1em]'>
-      <p className='text-[1rem] leading-loose font-bold'>Interpretation and Definitions</p>
-      <ul className='text-[1rem] leading-loose font-light'>
+    <div className="w-[23%] hidden md:flex md:flex-col lg:flex-col lg:flex py-[1em] pl-[1em]">
+      <p className="text-[1rem] leading-loose font-bold">Interpretation and Definitions</p>
+      <ul className="text-[1rem] leading-loose font-light">
         <li>Acknowledgment</li>
         <li>User Accounts</li>
         <li>Content</li>
@@ -13,7 +13,7 @@ const TermsAside = () => {
         <li>Your Feedback to Us</li>
         <li>Links to Other Websites</li>
         <li>Limitation of Liability</li>
-        <li>"AS IS" and "AS AVAILABLE"</li>
+        <li>&quot;AS IS&quot; and &quot;AS AVAILABLE&quot;</li>
         <li>Disclaimer</li>
         <li>Governing Law</li>
         <li>Disputes Resolution</li>
@@ -22,11 +22,10 @@ const TermsAside = () => {
         <li>United States Legal</li>
         <li>Compliance</li>
         <li>Severability and Waiver</li>
-        <li>Changes to These Terms and Conditions</li>              
+        <li>Changes to These Terms and Conditions</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default TermsAside
-
+export default TermsAside;
