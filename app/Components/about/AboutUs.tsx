@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import React from 'react';
-import abt from '../../../public/abtsec1.svg';
-import abt2 from '../../../public/abtsec2.svg';
+import abt from '../../../public/abtimage1.png';
+import abt2 from '../../../public/abtimage2.png';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
 import { APPROACH } from '@/libs/constants';
@@ -16,7 +16,7 @@ const AboutUs = () => {
   const isInView2 = useInView(titleRef);
 
   return (
-    <section className="my-8 lg:my-20 w-full flex flex-col items-center">
+    <section className="my-8 lg:my-20 w-full flex flex-col md:gap-y-20 gap-y-10 items-center font-Worksans py-10 md:py-14 lg:py-20">
       <h2
         ref={titleRef}
         className={cn(
@@ -27,22 +27,23 @@ const AboutUs = () => {
         About Us
       </h2>
 
-      <div>
-        <div className="flex">
-          <div>
-            <div>
-              <h2>Our Product Summary</h2>
-              <p>
+      
+        <div className="flex lg:flex-row flex-col-reverse justify-between w-full gap-y-10 xl:px-[100px] lg:px-[60px] md:px-10 px-6 md:text-xl text-base md:leading-8 leading-[30px] text-[#111111] ">
+          <div className='w-fit flex flex-col md:gap-y-10 gap-y-6'>
+            <div className='space-y-4 w-full'>
+              <h2 className='md:text-[40px] text-2xl text-[#161616] md:leading-[56px] leading-10 md:font-semibold font-medium'>Our Product Summary</h2>
+              <p className='2xl:w-[720px] xl:w-[600px] w-full'>
                 At Code Granites, we design and develop innovative digital solutions that go beyond expectations. From
                 custom software to web and mobile applications, we craft products that elevate businesses to new
                 heights.
               </p>
             </div>
-            <div>
-              <h2>Our Approach</h2>
-              <ul>
+
+            <div className='space-y-4 w-full'>
+              <h2 className='md:text-[40px] text-2xl text-[#161616] md:leading-[56px] leading-10 md:font-semibold font-medium'>Our Approach</h2>
+              <ul className='flex flex-col gap-y-6`'>
                 {APPROACH.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.id} className='flex items-center gap-x-2 my-3 md:text-xl text-base md:leading-8 leading-[30px] whitespace-nowrap'>
                     <Image src={list} alt={`Images-${item.id}`} />
                     <span>{item.details}</span>
                   </li>
@@ -50,22 +51,18 @@ const AboutUs = () => {
               </ul>
             </div>
           </div>
-          <div>
-            <div className="relative ">
-              <Image src={abt} width={480} height={376} alt="illustration " />
-              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+
+          
+            <div className="relative w-full h-full ">
+              <Image src={abt} alt="illustration" className='xl:w-[480px] w-full xl:h-[376px] h-full'/>
+             
                 <Image
                   src={abt2}
-                  width={480}
-                  height={376}
                   alt="illustration"
-                  className="transform -translate-x-1/2 translate-y-1/2"
+                  className="w-[480px] h-[376px] absolute 2xl:top-[200px] xl:top-[230px] right-[200px] xl:block hidden"
                 />
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };
