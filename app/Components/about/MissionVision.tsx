@@ -24,7 +24,7 @@ function MissionVision() {
         </div>
       </div>
       <div className="w-full">
-        <Image src={mvImg} alt="Image" className="xl:w-[504px] w-full xl:h-[423px] h-full" />
+        <Image src={mvImg} alt="Image" className="lg::w-[504px] w-full lg:h-[423px] h-full" />
       </div>
     </section>
   );
