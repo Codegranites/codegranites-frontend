@@ -15,13 +15,49 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-
+.transform-3d {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, -140px) rotateX(121deg);
+}
 .perspective {
-  perspective: 1000px;
+  perspective: 300px;
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+}
+
+.shadow-bounce {
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 30px);
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 4rem;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.327);
+    transform: translateZ(-29px);
+    animation: bounce-shadow 2.5s infinite;
+  }
+}
+
+@keyframes bounce-shadow {
+  from,
+  to {
+    transform: translateZ(-9px) translateY(5%) scale(0.9);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateZ(-9px) scale(1.3);
+    opacity: 1;
+  }
 }
 
 .image-bounce {
-  animation: bounce 2s infinite;
+  animation: bounce 2.5s infinite;
 
   @keyframes bounce {
     0%,
