@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex flex-col gap-y-5 w-full sm:max-w-[90%]   xl:max-w-[85%] 2xl:max-w-[90%]  items-center">
           <h2 className="max-[400px]:text-base max-[500px]:text-lg text-xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-semibold sm:font-bold scale-y-110 mb-4 lg:mb-8">
             <TypewriterComponent
-              component="h2"
+              component="span"
               options={{
                 autoStart: true,
                 delay: 100,
