@@ -9,10 +9,12 @@ import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import MobileNav from './MobileNav';
 import { useStateCtx } from '@/context/StateContext';
+import useWindowHeight from '@/hooks/useDimension';
 
 const Navbar = () => {
   const { showMobileMenu, setShowMobileMenu } = useStateCtx();
   const searchParams = useSearchParams().get('path');
+  const scrollHeight = useWindowHeight();
 
   const [isActive, setIsActive] = useState('');
   useEffect(() => {
@@ -23,8 +25,21 @@ const Navbar = () => {
   }, [searchParams]);
 
   return (
-    <nav className="max-[500px]:py-2 py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center bg-white/80">
-      <Link href="/?path=home" className="w-fit max-sm:w-[120px] max-[450px]:w-[100px]">
+    <nav
+      className={cn(
+        'max-[500px]:py-2   px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center  transition-colors duration-500',
+        scrollHeight > 200
+          ? ' fixed backdrop-blur-xl top-0 left-0  z-50 -translate-y-28 opacity-0 animate-slideDown bg-white/90 py-2 border-b border-gray-200 shadow-md'
+          : 'sm:py-6 bg-white/80 py-4',
+        {
+          'bg-white/60': scrollHeight > 800 && scrollHeight < 4300,
+        },
+      )}
+    >
+      <Link
+        href="/?path=home"
+        className={cn(' max-sm:w-[120px] max-[450px]:w-[100px]', scrollHeight > 200 ? 'w-[120px] ' : 'w-fit')}
+      >
         <Image src="/logo.png" alt="logo" width={155} height={55} />
       </Link>
 

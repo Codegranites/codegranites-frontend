@@ -54,7 +54,7 @@ const MobileNav = () => {
       />
       <nav
         className={cn(
-          'pt-20 lg:hidden py-4 sm:py-6 px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full max-w-[300px] sm:max-w-[70%] md:max-w-[50%] justify-between items-center bg-white/80 backdrop-blur-lg fixed right-0 top-0 z-50 h-screen transition-all opacity-0',
+          'pt-20 lg:hidden  px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full max-w-[300px] sm:max-w-[70%] md:max-w-[50%] justify-between items-center bg-white/80 backdrop-blur-lg fixed right-0 top-0 z-50 h-screen transition-all opacity-0',
           showMobileMenu ? 'translate-x-0 duration-1000 opacity-100' : 'translate-x-full duration-300',
         )}
       >

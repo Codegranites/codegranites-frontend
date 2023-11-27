@@ -16,6 +16,8 @@ const config: Config = {
         loadspin: "loadspin 1.2s linear infinite",
         pulsing: "pulsing 1.5s ease infinite",
         rotate3d: "rotate3d 2s 1s linear infinite",
+        slideDown: "slideDown 1s 0.2s ease forwards",
+         slideNavUp: "slideDown 1s 0.2s ease forwards",
         
       },
       keyframes: {
@@ -37,11 +39,25 @@ const config: Config = {
         slideUp: {
           "70%": {
             opacity: "0.7",
-            transform: "translateY(50)",
+            transform: "translateY(50px)",
           },
           "100%": {
             transform: "translateY(0)",
             opacity: "1",
+          },
+        },
+        slideDown: {
+         
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+         slideNavUp: {
+         
+          "100%": {
+            transform: "translateY(-112px)",
+            opacity: "0",
           },
         },
         fadeOut: {
