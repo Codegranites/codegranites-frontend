@@ -12,7 +12,7 @@ const Butt = () => {
       </div>
       <div className="w-full h-full max-h-[650px] sm:hidden absolute top-0 left-0">
         <Image
-          src="/landing-mobile.png"
+          src="/img.svg"
           alt="hero image"
           width={380}
           height={500}

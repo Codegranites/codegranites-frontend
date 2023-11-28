@@ -75,8 +75,8 @@ export const FOOTER_LINKS: FooterLinkProps = {
   ],
   emails: [
     { id: 1, email: 'Info@codesgranite.com' },
-    { id: 2, email: 'Info@codesgranite.com' },
-    { id: 3, email: 'Info@codesgranite.com' },
+    { id: 2, email: 'Contact@codesgranite.com' },
+    { id: 3, email: 'Support@codesgranite.com' },
   ],
 };
 
