@@ -86,7 +86,8 @@ const config: Config = {
         "color-600": "#161616",
         "color-normal": "#535353",
         "header": "#282828",
-        "card": "#FBF9FA"
+        "card": "#FBF9FA",
+        "checked": "#2E577D"
       },
       fontFamily: {
         Worksans: ["Work Sans", "sans-serif"],

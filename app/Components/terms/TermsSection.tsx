@@ -1,14 +1,21 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Button from '../UI/Button';
 import Input from '../UI/Input';
 
 const TermsSection = () => {
   const btnText = 'Accept Terms';
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
   return (
-    <div className="w-[87%] lg:w-[100%] px-[.6em] py-[1em] lg:px-[3.5em]">
+    <div className="w-[87%] lg:w-[100%] justify-center px-[.6em] py-[1em] lg:px-[3.5em]">
       {/* First Paragraph */}
 
-      <div className="w-[100%]">
+      <div className="w-[100%] justify-center items-center">
         <h2 className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
           1. Interpretation and Definitions
         </h2>
@@ -524,17 +531,23 @@ const TermsSection = () => {
 
         <div className="pt-[6em] flex flex-col p-2 mx-auto w-[60%]">
           <div className="flex items-center py-4">
-            <input className="checked:bg-[#2E577D checked:focus:bg-[#2E577D focus:bg-[#2E577D" type="checkbox"></input>
+            <input
+              className="accent-checked"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+              type="checkbox"
+            ></input>
             <p className="px-2 font-medium">I&apos;ve read all Terms and Conditions</p>
           </div>
-          <Button
-            styles={
-              ' w-[300px] bg-[#2E577D] border border-transparent duration-300 hover:bg-[#2E577D] hover:border-transparent py-2 rounded-lg item-center justify-center text-[#FFFFFF] flex gap-2 text-white-100 text-base mt-3 text-right'
-            }
-            title={''}
+          <button
+            className={` w-[300px] bg-checked  border border-transparent duration-300 hover:bg-[#2E577D] ${
+              isChecked ? 'cursor-pointer' : 'cursor-not-allowed'
+            } hover:border-transparent py-2 rounded-lg item-center justify-center text-[#FFFFFF] flex gap-2 text-white-100 text-base mt-3 text-right`}
+            disabled={!isChecked}
           >
             {btnText}
-          </Button>
+          </button>
+
           <p className="pt-[6%] text-[#2E577D] w-[50%] mx-auto cursor-pointer">I Decline</p>
         </div>
       </div>
