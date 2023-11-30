@@ -1,57 +1,38 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
-import React from 'react';
-import useInView from '@/hooks/useInView';
-import cn from '@/utils/tailwind';
+
+import { handleMouseEnter } from '@/libs/text-effect';
 import Image from 'next/image';
 
 const ContactHero = () => {
-  const worksRef = React.useRef<HTMLDivElement>(null);
-  const titleRef = React.useRef<HTMLHeadingElement>(null);
-  const isInView2 = useInView(titleRef);
   return (
-    <section className="relative h-[63vh] w-full ">
-      <div
-        className={cn(
-          'absolute',
-          isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
-        )}
-      >
+    <section className="relative h-[267px] sm:h-[523px] w-full">
+      <div className="w-full h-full max-h-[720px] max-sm:h-[267px] sm:block absolute top-0 left-0">
         <Image
-          className="lg:w-screen h-[66vh] object-cover"
-          src="/contactOne.jpeg"
-          alt="Background Image"
-          width={1000}
-          height={500}
-        ></Image>
+          src="/contact.jpeg"
+          alt="hero image"
+          width={1440}
+          height={523}
+          priority
+          className="w-full h-full sm:object-cover"
+        />
       </div>
 
-      <div
-        ref={titleRef}
-        className={cn(
-          'absolute z-10 top-0 left-0 duration-300 bg-black/40 w-full h-[66vh] text-white flex flex-col justify-center p-4 text-center',
-          isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
-        )}
-      >
-        <h2
-          ref={worksRef}
-          className={cn(
-            'text-[#ffffff] font-bold text-2xl md:text-3xl lg:text-5xl text-center leading-[5.625em]',
-            isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
-          )}
-        >
-          Contact Us
-        </h2>
-        <p
-          ref={worksRef}
-          className={cn(
-            'text-[#ffffff] text-xl lg:text-[1.5rem] lg:pt-[1.2em] leading-7 lg:leading-10 w-[100%] lg:w-[80%] text-center mx-auto',
-            isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
-          )}
-        >
-          At CodeGranites, we&apos;re passionate about crafting innovative digital solutions that exceed expectations.
-          Whether you&apos;re seeking custom software, web development, or mobile applications that can take your
-          business to new heights, we&apos;re here to help.
-        </p>
+      <div className="flex top-0 relative z-10 text-white h-full items-center w-full bg-black/70 xl:bg-black/80 justify-center px-2 sm:px-4 lg:px-8 transition-colors duration-500">
+        <div className="flex flex-col gap-y-5 w-full sm:max-w-[90%]   xl:max-w-[85%] 2xl:max-w-[90%]  items-center">
+          <h2
+            onMouseEnter={handleMouseEnter}
+            className=" text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold sm:font-bold scale-y-110 mb-4 lg:mb-8"
+            data-value="Contact Us"
+          >
+            Contact Us
+          </h2>
+          <p className="w-full sm:max-w-[80%] text-center sm:font-medium text-white/80 text-sm sm:text-lg">
+            At CodeGranites, we're passionate about crafting innovative digital solutions that exceed expectations.
+            Whether you're seeking custom software, web development, or mobile applications that can take your business
+            to new heights, we're here to help.
+          </p>
+        </div>
       </div>
     </section>
   );

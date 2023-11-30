@@ -54,14 +54,15 @@ const MobileNav = () => {
       />
       <nav
         className={cn(
-          'pt-20 lg:hidden  px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full max-w-[300px] sm:max-w-[70%] md:max-w-[50%] justify-between items-center bg-white/80 backdrop-blur-lg fixed right-0 top-0 z-50 h-screen transition-all opacity-0',
+          'pt-20 lg:hidden  px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full max-w-[300px] sm:max-w-[70%] md:max-w-[50%] justify-between items-center bg-white/90 backdrop-blur-lg fixed right-0 top-0 z-50 h-screen transition-all opacity-0',
           showMobileMenu ? 'translate-x-0 duration-1000 opacity-100' : 'translate-x-full duration-300',
         )}
       >
         <button
+          autoFocus
           aria-label="close menu"
           type="button"
-          className="outline-none text-primary text-2xl sm:text-4xl absolute top-2 right-2 h-12 w-12 rounded-full border focus:border-2 border-primary focus:border-black flex justify-center items-center"
+          className="outline-none text-primary text-2xl sm:text-4xl absolute top-2 right-2 h-12 w-12 rounded-full border focus:border-2 focus-visible:border-primary  flex justify-center items-center"
           onClick={() => setShowMobileMenu(false)}
           tabIndex={0}
         >
@@ -70,6 +71,7 @@ const MobileNav = () => {
         <div className="flex flex-col items-start h-full gap-y-10 ">
           {NAV_LINKS.map((link) => (
             <Link
+              tabIndex={0}
               aria-label={link.label}
               href={link.link === 'home' ? '/?path=home' : `${link.link}?path=${link.link}`}
               key={link.id}
@@ -78,7 +80,7 @@ const MobileNav = () => {
                 setShowMobileMenu(false);
               }}
               className={cn(
-                '  text-black  flex justify-center capitalize relative font-medium  before:bg-primary-light before:w-[0%] before:h-1 before:absolute before:-bottom-2 before:left-0 before:transition-all before:duration-500 text-lg',
+                'border focus-visible:rounded-md focus-visible:border-2 outline-none focus-visible:p-1 focus-visible:border-primary   text-black  flex justify-center capitalize relative font-medium  before:bg-primary-light before:w-[0%] before:h-1 before:absolute before:-bottom-2 before:left-0 before:transition-all before:duration-500 text-lg',
                 isActive === link.link ? 'before:w-full text-primary-light' : '',
               )}
             >
