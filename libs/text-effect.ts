@@ -4,7 +4,7 @@ export const handleMouseEnter = (name: any) => {
   if (!name) return;
   let iteration = 0;
   name = name.target;
-  let speed = name.dataset.value.length > 7 ? 60 : 40;
+  let speed = name.dataset.value.length > 7 ? 40 : 60;
 
   clearInterval(interval);
   interval = setInterval(() => {

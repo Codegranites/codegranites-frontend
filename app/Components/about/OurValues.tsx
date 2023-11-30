@@ -5,6 +5,7 @@ import WorksCard from '../home/card/WorksCard';
 import { OurValues } from '@/libs/constants';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
+import { handleMouseEnter } from '@/libs/text-effect';
 
 const OurValuesSection = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
@@ -16,6 +17,8 @@ const OurValuesSection = () => {
     <section className="h-full w-full flex flex-col items-center mb-8 lg:mb-20 mt-8 gap-y-5 lg:gap-y-8 xl:gap-y-12 2xl:gap-y-20">
       <h2
         ref={titleRef}
+        onMouseEnter={handleMouseEnter}
+        data-value="Our Values"
         className={cn(
           'font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-header',
           isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
