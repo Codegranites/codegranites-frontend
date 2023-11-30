@@ -3,7 +3,7 @@ import React from 'react';
 
 const TermsAside = () => {
   return (
-    <div className="w-[23%] hidden md:flex md:flex-col lg:flex-col lg:flex py-[1em] pl-[1em] md:sticky top-4 ">
+    <div className="w-[23%] hidden md:flex md:flex-col lg:flex-col lg:flex py-[1em] pl-[1em] md:sticky top-10 ">
       <p className="text-[1rem] leading-loose font-bold">Interpretation and Definitions</p>
       <div className="text-[1rem] leading-loose font-light flex flex-col gap-y-4">
         <Link href="#">Acknowledgment</Link>
