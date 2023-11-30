@@ -1,16 +1,17 @@
 'use client';
+
 import React from 'react';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
-import Left from './Left';
-import Right from './Right';
+import ContactInfo from './ContactInfo';
+import ContactForm from './ContactForm';
 
-const Form = () => {
+const FormContainer = () => {
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const isInView2 = useInView(titleRef);
 
   return (
-    <section className="w-full pt-[100px]">
+    <section className="w-full py-20 min-h-screen max-container ">
       <p
         ref={titleRef}
         className={cn(
@@ -22,12 +23,12 @@ const Form = () => {
         need.
       </p>
 
-      <div className="flex flex-col-reverse lg:flex lg:flex-row justify-between items-center lg:p-[10%] mx-auto my-[.5em]">
-        <Left />
-        <Right />
-      </div>
+      <section className="h-full w-full flex flex-col-reverse lg:flex lg:flex-row justify-between lg:items-start items-center lg:p-[10%] mx-auto my-[.5em] lg:gap-x-6">
+        <ContactInfo />
+        <ContactForm />
+      </section>
     </section>
   );
 };
 
-export default Form;
+export default FormContainer;

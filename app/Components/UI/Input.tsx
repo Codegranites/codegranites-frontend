@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 import { useId } from 'react';
-import { clsx } from 'clsx';
+
 import Label from './Label';
+import cn from '@/utils/tailwind';
 
 interface BaseInputProps {
   label?: string;
@@ -51,7 +52,7 @@ const Input: React.FC<BaseInputProps> = (props) => {
   };
 
   return (
-    <div className={clsx('relative', className)}>
+    <div className={cn('relative', className)}>
       {label && (
         <Label id={id}>
           {label} {required && '*'}
@@ -61,7 +62,7 @@ const Input: React.FC<BaseInputProps> = (props) => {
         id={id}
         type={type}
         placeholder={placeholder}
-        className={clsx([
+        className={cn([
           styles.base,
           rounded && styles.rounded[rounded],
           error ? styles.state.error : styles.state.normal,

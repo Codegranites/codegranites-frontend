@@ -20,7 +20,7 @@ export const FAQs = () => {
     <section
       ref={faqRef}
       className={cn(
-        'flex flex-col justify-center w-full items-center py-20 relative z-10 ',
+        'flex flex-col justify-center w-full items-center py-20 relative z-10 overflow-hidden',
         isInView ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
       )}
     >

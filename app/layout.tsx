@@ -21,14 +21,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={workSans.variable}>
-      <StateContextProvider>
-        <body className={workSans.className}>
+      <body className={workSans.className}>
+        <StateContextProvider>
           <Navbar />
           <Providers>{children}</Providers>
           <Footer />
           <GotoTop />
-        </body>
-      </StateContextProvider>
+        </StateContextProvider>
+      </body>
     </html>
   );
 }
