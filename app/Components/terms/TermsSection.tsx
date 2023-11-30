@@ -12,10 +12,10 @@ const TermsSection = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="w-[87%] lg:w-[100%] justify-center px-[.6em] py-[1em] lg:px-[3.5em]">
+    <div className="w-[87%] lg:w-[100%] px-[.6em] py-[1em] lg:px-[3.5em]">
       {/* First Paragraph */}
 
-      <div className="w-[100%] justify-center items-center">
+      <div className="w-[100%]">
         <h2 className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
           1. Interpretation and Definitions
         </h2>
