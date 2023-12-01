@@ -80,7 +80,7 @@ const config: Config = {
         },
       },
       colors: {
-        primary: "#052C42",
+        "primary": "#052C42",
         "primary-light": "#2E577D",
         "primary-dark": "#031824",
         "color-600": "#161616",
