@@ -16,8 +16,8 @@ export default function Home() {
         <HowItWorks />
         <Clients />
         <FAQs />
-        <Butt />
       </main>
+      <Butt />
     </>
   );
 }
