@@ -4,22 +4,26 @@ import React, { useState } from 'react';
 import Button from '../UI/Button';
 import Input from '../UI/Input';
 import TermsAside from './TermsAside';
+import { checkBoxClassName } from './constants';
 
 const TermsSection = () => {
   const btnText = 'Accept Terms';
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
+    setIsChecked((prev) => !prev);
   };
   return (
     <div className="flex flex-col md:flex-row  justify-between w-full items-start">
       <TermsAside />
-      <div className=" w-[87%] lg:w-[100%] px-[.6em] py-[1em] lg:px-[3.5em]">
+      <div className="w-full sm:w-[87%] lg:w-[100%] px-[.6em] py-[1em] lg:px-[3.5em] [&>div>h2]:pt-20">
         {/* First Paragraph */}
 
-        <div className="w-[100%]">
-          <h2 className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+        <div className="w-[100%] ">
+          <h2
+            id="interpretation_and_definitions"
+            className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             1. Interpretation and Definitions
           </h2>
           <h3 className="text-[1rem] lg:text-[1.12rem] font-medium py-[4%]">1.1. Interpretation</h3>
@@ -78,7 +82,10 @@ const TermsSection = () => {
 
           {/* Second Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="acknowledgment"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             2. Acknowledgment
           </h2>
           <p className="lg:text-[1rem] pb-[3%] font-normal leading-7">
@@ -113,7 +120,10 @@ const TermsSection = () => {
 
           {/* Third Paragraph  */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="user_accounts"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             3. User Accounts
           </h2>
 
@@ -136,7 +146,10 @@ const TermsSection = () => {
 
           {/* Forth Paragraph  */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="content"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             4. Content
           </h2>
 
@@ -238,7 +251,10 @@ const TermsSection = () => {
 
           {/* Fifth Paragraph  */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="copyright_policy"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             5. Copyright Policy
           </h2>
 
@@ -303,7 +319,10 @@ const TermsSection = () => {
 
           {/* Sixth Paragraph */}
 
-          <h2 className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="intellectual_property"
+            className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10 pt-16"
+          >
             6. Intellectual Property
           </h2>
 
@@ -323,7 +342,10 @@ const TermsSection = () => {
 
           {/* Seventh Paragraph  */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="your_feedback"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             7. Your Feedback to Us
           </h2>
 
@@ -336,7 +358,10 @@ const TermsSection = () => {
 
           {/* Eight Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="links_to_other_websites"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             8. Links to Other Websites
           </h2>
 
@@ -370,7 +395,10 @@ const TermsSection = () => {
 
           {/* Nineth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="limitation_of_liability"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             9. Limitation of Liability
           </h2>
 
@@ -399,7 +427,10 @@ const TermsSection = () => {
 
           {/* Tenth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="disclaimer"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             10. &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
           </h2>
 
@@ -436,7 +467,10 @@ const TermsSection = () => {
 
           {/* Eleventh Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="governing_law"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             11. Governing Law
           </h2>
 
@@ -448,7 +482,10 @@ const TermsSection = () => {
 
           {/* Tweleveth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="disputes_resolution"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             12. Disputes Resolution
           </h2>
 
@@ -459,7 +496,10 @@ const TermsSection = () => {
 
           {/* Thirtheenth Paragraph */}
 
-          <h2 className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="for_european_union"
+            className="text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             13. For European Union (EU) Users
           </h2>
 
@@ -470,7 +510,10 @@ const TermsSection = () => {
 
           {/* Fourteenth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="united_states_legal"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             14. United States Legal Compliance
           </h2>
 
@@ -483,7 +526,10 @@ const TermsSection = () => {
 
           {/* Fifteenth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="severability_and_waiver"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             15. Severability and Waiver
           </h2>
 
@@ -505,7 +551,10 @@ const TermsSection = () => {
 
           {/* Sixteenth Paragraph */}
 
-          <h2 className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10">
+          <h2
+            id="changes_to_these_terms_and_conditions"
+            className="py-[1em] text-[1.1rem] lg:text-[1.2rem] first-line:lg:text-[1.5rem] font-semibold leading-10"
+          >
             16. Changes to These Terms and Conditions
           </h2>
 
@@ -538,14 +587,14 @@ const TermsSection = () => {
 
           {/* Bottom */}
 
-          <div className="pt-[6em] flex flex-col p-2 mx-auto w-[60%]">
+          <div className="pt-[6em] flex flex-col p-2 mx-auto w-full items-center">
             <div className="flex items-center py-4">
               <input
-                className="accent-checked"
+                className={checkBoxClassName}
                 checked={isChecked}
                 onChange={handleCheckboxChange}
                 type="checkbox"
-              ></input>
+              />
               <p className="px-2 font-medium">I&apos;ve read all Terms and Conditions</p>
             </div>
             <button
@@ -557,7 +606,7 @@ const TermsSection = () => {
               {btnText}
             </button>
 
-            <p className="pt-[6%] text-[#2E577D] w-[50%] mx-auto cursor-pointer">I Decline</p>
+            <p className="pt-[6%] text-[#2E577D]  cursor-pointer">I Decline</p>
           </div>
         </div>
       </div>
