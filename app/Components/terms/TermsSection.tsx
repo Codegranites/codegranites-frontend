@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-import Button from '../UI/Button';
-import Input from '../UI/Input';
+import { useState } from 'react';
 import TermsAside from './TermsAside';
 import { checkBoxClassName } from './constants';
 

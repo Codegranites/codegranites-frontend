@@ -1,5 +1,7 @@
 # CODEGRANITES | FRONTEND
 
+![Project Image](https://github.com/Codegranites/codegranites-frontend/blob/master/public/codeGranites.png)
+
 ## Table of Contents ✨
 
 - [Description](#description)
