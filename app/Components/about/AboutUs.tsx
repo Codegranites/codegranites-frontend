@@ -8,6 +8,7 @@ import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
 import { APPROACH } from '@/libs/constants';
 import list from '../../../public/icons/list.svg';
+import { handleMouseEnter } from '@/libs/text-effect';
 
 const AboutUs = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
@@ -19,6 +20,8 @@ const AboutUs = () => {
     <section className="my-8 lg:my-20 w-full flex flex-col md:gap-y-20 gap-y-10 items-center font-Worksans py-10 md:py-14 lg:py-20">
       <h2
         ref={titleRef}
+        onMouseEnter={handleMouseEnter}
+        data-value="About Us"
         className={cn(
           'font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-header',
           isInView2 ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',

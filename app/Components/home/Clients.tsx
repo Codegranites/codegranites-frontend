@@ -11,7 +11,7 @@ const Clients = () => {
   const clientRef = React.useRef<HTMLHeadingElement>(null);
   const isInView = useInView(clientRef);
   return (
-    <section className={cn('w-full mb-10 flex flex-col items-center ')}>
+    <section className={cn('w-full my-10 flex flex-col items-center ')}>
       <h2
         ref={clientRef}
         className={cn(
@@ -21,7 +21,7 @@ const Clients = () => {
       >
         What Our Clients Say
       </h2>
-      <div className="flex w-full justify-center  items-center relative mt-10 lg:mt-16 px-4 lg:px-8">
+      <div className="flex w-full justify-center  items-center relative mt-10 sm:mt-16 px-4 lg:px-8">
         <ClientSlider />
       </div>
     </section>

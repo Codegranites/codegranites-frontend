@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Hero from './Components/home/Hero';
 import WhyUs from './Components/home/WhyUs';
 
@@ -16,8 +15,8 @@ export default function Home() {
         <HowItWorks />
         <Clients />
         <FAQs />
-        <Butt />
       </main>
+      <Butt />
     </>
   );
 }

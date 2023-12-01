@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import serv from '../../../public/services.svg';
 import servm from '../../../public/services-mobile.svg';
+import { handleMouseEnter } from '@/libs/text-effect';
 
 const Hero = () => {
   return (
@@ -14,7 +16,11 @@ const Hero = () => {
       </div>
       <div className="flex top-0 relative z-10 text-white h-full items-center w-full bg-black/40 justify-center px-2 sm:px-4 lg:px-8">
         <div className="flex flex-col gap-y-5 w-full sm:max-w-[90%]   xl:max-w-[80%]  items-center">
-          <p className="max-[400px]:text-base max-[500px]:text-lg text-xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold sm:font-bold scale-y-110 mb-4 lg:mb-8">
+          <p
+            className="max-[400px]:text-base max-[500px]:text-lg text-xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold sm:font-bold scale-y-110 mb-4 lg:mb-8"
+            onMouseEnter={handleMouseEnter}
+            data-value="Services"
+          >
             Services
           </p>
           <p className="w-[50%] sm:max-w-[80%] text-center sm:font-medium text-white/80 text-sm sm:text-lg">
