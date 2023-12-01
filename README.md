@@ -1,6 +1,6 @@
 # CODEGRANITES | FRONTEND
 
-![Project Image](https://github.com/Codegranites/codegranites-frontend/blob/master/public/codeGranites.png)
+![Project Image](https://github.com/Codegranites/codegranites-frontend/blob/dev/public/codeGranites.png)
 
 ## Table of Contents ✨
 
