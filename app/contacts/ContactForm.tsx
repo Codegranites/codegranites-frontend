@@ -1,14 +1,16 @@
 import React, { FormEvent, useState } from 'react';
 import cn from '@/utils/tailwind';
 import useInView from '@/hooks/useInView';
+import { ContactUs } from '@/http/calls';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
   const initailForm = {
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
     email: '',
-    phone: '',
-    companyName: '',
+    phonenumber: '',
+    companyname: '',
     subject: '',
     message: '',
   };
@@ -16,17 +18,26 @@ const ContactForm = () => {
   const [formData, setFormData] = useState(initailForm);
 
   const isDisabled =
-    formData.firstName === '' ||
-    formData.lastName === '' ||
+    formData.firstname === '' ||
+    formData.lastname === '' ||
     formData.email === '' ||
-    formData.phone.length < 11 ||
+    formData.phonenumber.length < 11 ||
     formData.message === '';
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const isInView2 = useInView(titleRef);
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+
+    try {
+      const response = await ContactUs(formData);
+
+      console.log('Response from ContactUs:', response);
+      toast.success('Contact form submitted successfully!');
+    } catch (error) {
+      console.error('Error from ContactUs:', error);
+      toast.error('Error submitting contact form. Please try again.');
+    }
   };
 
   return (
@@ -48,10 +59,10 @@ const ContactForm = () => {
             className=" rounded-lg border border-[#E1E1E1] w-full py-4 px-4 bg-white text-gray-700 focus-visible:border-primary-light outline-none transition-all duration-300"
             type="text"
             placeholder="e.g, John"
-            name="firstName"
-            id="firstName"
+            name="firstname"
+            id="firstname"
             required
-            value={formData.firstName}
+            value={formData.firstname}
             onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
           />
         </div>
@@ -67,10 +78,10 @@ const ContactForm = () => {
             className=" rounded-lg border border-[#E1E1E1] w-full py-4 px-4 bg-white text-gray-700 focus-visible:border-primary-light outline-none transition-all duration-300"
             type="text"
             placeholder="e.g, Smith"
-            name="lastName"
-            id="lastName"
+            name="lastname"
+            id="lastname"
             required
-            value={formData.lastName}
+            value={formData.lastname}
             onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
           />
         </div>
@@ -106,9 +117,9 @@ const ContactForm = () => {
             required
             min={11}
             placeholder="+234-00-123-2323"
-            name="phone"
-            id="phone"
-            value={formData.phone}
+            name="phonenumber"
+            id="phonenumber"
+            value={formData.phonenumber}
             onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
           />
         </div>
@@ -116,16 +127,16 @@ const ContactForm = () => {
         {/* {Company Name } */}
 
         <div className="flex flex-col gap-y-2">
-          <label htmlFor="companyName" className="text-lg ">
+          <label htmlFor="companyname" className="text-lg ">
             <span className="font-medium">Company Name</span>
           </label>
           <input
             className=" rounded-lg border border-[#E1E1E1] w-full py-4 px-4 bg-white text-gray-700 focus-visible:border-primary-light outline-none transition-all duration-300"
             type="text"
             placeholder="e.g, xyz company"
-            name="companyName"
-            id="companyName"
-            value={formData.companyName}
+            name="companyname"
+            id="companyname"
+            value={formData.companyname}
             onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
           />
         </div>

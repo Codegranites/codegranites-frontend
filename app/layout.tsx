@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Styles/globals.scss';
 import Navbar from '@/app/Components/navs/Navbar';
 import Footer from '@/app/Components/footer/Footer';
@@ -22,6 +24,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={workSans.variable}>
       <body className={workSans.className}>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
         <StateContextProvider>
           <Navbar />
           <Providers>{children}</Providers>
