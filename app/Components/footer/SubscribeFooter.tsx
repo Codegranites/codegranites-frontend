@@ -2,13 +2,32 @@
 
 import React, { useState } from 'react';
 import { MdOutlineChevronRight } from 'react-icons/md';
+import { toast } from 'react-toastify';
+import { subscribeToEmail } from '@/http/calls';
 
 const SubscribeFooter = () => {
   const [email, setEmail] = useState('');
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await subscribeToEmail({ email });
+
+      console.log('Response from subscribeToEmail:', response);
+
+      toast.success('Subscription successful!');
+
+      setEmail('');
+    } catch (error) {
+      console.error('Error from subscribeToEmail:', error);
+      toast.error('Error subscribing to email. Please try again.');
+    }
+  };
+
   return (
     <div className="w-full min-[550px]:max-w-[300px] sm:max-w-[380px] flex flex-col border border-gray-300 rounded-lg p-2 sm:px-2 sm:py-4 max-[550px]:py-4">
-      <form className="flex flex-col">
+      <form className="flex flex-col" onSubmit={handleSubmit}>
         <label htmlFor="subscribe" className="font-medium text-sm sm:text-base text-color-600 ">
           Subscribe to our newsletter
         </label>
