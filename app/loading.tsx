@@ -3,7 +3,7 @@ import LoadingSpinner from './Components/loaders/LoadingSpinner';
 
 export default function loading() {
   return (
-    <div className="w-full gap-x-5 items-center flex justify-start ">
+    <div className="w-full gap-x-5 items-center flex justify-center ">
       <LoadingSpinner />
       <span>loading...</span>
     </div>
