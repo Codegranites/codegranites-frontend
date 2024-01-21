@@ -1,5 +1,4 @@
-import  cn  from '../../utils/tailwind';
-import { useEffect } from 'react';
+import cn from '../../utils/tailwind';
 
 const SplashScreen = () => {
   return (

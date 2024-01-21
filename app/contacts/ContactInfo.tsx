@@ -54,11 +54,11 @@ const ContactInfo = () => {
       </div>
 
       <div className="flex items-center gap-x-5 lg:mt-20">
-        <Link href="https://linkedin.com/company/codegranites" target="_blank">
+        <Link href="https://linkedin.com/company/codegranites" target="_blank" rel="noopener noreferrer">
           <Image src="/icons/linked-in.png" width="36" height="36" alt="Linkedin Icon" />
         </Link>
 
-        <Link href="https://twitter.com/CodeGranites" target="_blank">
+        <Link href="https://twitter.com/CodeGranites" target="_blank" rel="noopener noreferrer">
           <Image src="/icons/x.png" width="36" height="36" alt="X Icon" />
         </Link>
       </div>

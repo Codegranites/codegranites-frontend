@@ -5,6 +5,7 @@ import ServCard from './card/ServCard';
 import { Services } from '@/libs/constants';
 import useInView from '@/hooks/useInView';
 import cn from '@/utils/tailwind';
+import WorksCard from '../home/card/WorksCard';
 
 const OurServices = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ const OurServices = () => {
         )}
       >
         {Services.map((work) => (
-          <ServCard key={work.id} {...work} />
+          <WorksCard key={work.id} {...work} />
         ))}
       </div>
     </section>
