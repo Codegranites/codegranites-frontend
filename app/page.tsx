@@ -13,6 +13,7 @@ export default function Home() {
       <main className="max-container w-full flex flex-col">
         <WhyUs />
         <HowItWorks />
+
         {/* <Clients /> */}
         <FAQs />
       </main>
