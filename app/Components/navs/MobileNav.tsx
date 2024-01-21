@@ -89,7 +89,7 @@ const MobileNav = () => {
             </Link>
           ))}
           <div className="lg:hidden flex flex-col gap-y-5 [&>button]:border-primary-light [&>button]:border [&>button]:px-4 [&>button]:py-2 [&>button]:rounded-md [&>button:last-child]:bg-primary-light  [&>button:last-child]:text-white [&>button]:font-medium [&>button]:text-primary-light">
-            <button type="button">Login</button>
+            {/* <button type="button">Login</button> */}
             <button type="button">Get started</button>
           </div>
         </div>
