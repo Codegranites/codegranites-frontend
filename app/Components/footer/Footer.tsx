@@ -54,12 +54,22 @@ const Footer = () => {
                 <li key={email.id}>{email.email}</li>
               ))}
               <div className="flex items-center gap-x-4">
-                <span className="text-white h-[24px] w-[24px] bg-[#2867B2] font-medium rounded-full flex justify-center items-center">
+                <Link
+                  href="https://www.linkedin.com/company/codegranites/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white h-[24px] w-[24px] bg-[#2867B2] font-medium rounded-full flex justify-center items-center"
+                >
                   in
-                </span>
-                <span className="text-white h-[24px] w-[24px] bg-black font-medium p-[1px] rounded-full flex justify-center items-center">
+                </Link>
+                <Link
+                  href="https://twitter.com/CodeGranites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white h-[24px] w-[24px] bg-black font-medium p-[1px] rounded-full flex justify-center items-center"
+                >
                   <BsTwitterX />
-                </span>
+                </Link>
               </div>
             </ul>
           </div>
