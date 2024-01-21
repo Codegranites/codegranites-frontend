@@ -9,5 +9,5 @@ const LandingPage = dynamic(() => import('./landingpage'), {
 });
 
 export default async function Home() {
-  return <LandingPage />;
+  return <LandingPage />
 }
