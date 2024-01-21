@@ -1,18 +1,26 @@
+// 'use client';
+import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Styles/globals.scss';
-import Navbar from '@/app/Components/navs/Navbar';
 import Footer from '@/app/Components/footer/Footer';
 import { Providers } from '../app/provider';
 import GotoTop from './Components/GotoTop';
 import StateContextProvider from '@/context/StateContext';
+import { Suspense } from 'react';
+import SkeletonNavbar from './Components/skelton';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-work-sans',
+});
+
+const Navbar = dynamic(() => import('./Components/navs/Navbar'), {
+  ssr: false,
+  loading: () => <SkeletonNavbar />,
 });
 
 export const metadata: Metadata = {
@@ -36,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           theme="light"
         />
         <StateContextProvider>
-          <Navbar />
+          <Suspense fallback={<SkeletonNavbar />}>
+            <Navbar />
+          </Suspense>
           <Providers>{children}</Providers>
           <Footer />
           <GotoTop />

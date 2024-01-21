@@ -1,11 +1,8 @@
 import React from 'react';
-import LoadingSpinner from './Components/loaders/LoadingSpinner';
+import SplashScreen from './Components/splashscreen';
 
-export default function loading() {
-  return (
-    <div className="w-full gap-x-5 items-center flex justify-center ">
-      <LoadingSpinner />
-      <span>loading...</span>
-    </div>
-  );
-}
+const Loading = () => {
+  return <SplashScreen />;
+};
+
+export default Loading;
