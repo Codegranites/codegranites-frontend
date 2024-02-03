@@ -13,7 +13,7 @@ export default function LandingPage() {
       <main className="max-container w-full flex flex-col">
         <WhyUs />
         <HowItWorks />
-        {/* <Clients /> */}
+    <Clients /> 
         <FAQs />
       </main>
       <Butt />
